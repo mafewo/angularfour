@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TabsetComponent } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-root',
