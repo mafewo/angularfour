@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { CoursesComponent } from './courses/courses.component';
-import { HomeComponent } from './home/home.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
   { path: 'calendar', component: CalendarComponent },
