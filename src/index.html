@@ -1,14 +1,35 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Angularfour</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '309754309450059',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();   
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </head>
 <body>
   <app-root></app-root>
+  <app-calendar></app-calendar>
+  <app-courses></app-courses>
 </body>
 </html>
