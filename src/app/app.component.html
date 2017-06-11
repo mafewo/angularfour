@@ -38,14 +38,13 @@
       </div>
     </form>
     <ul class="nav navbar-nav navbar-right">
-      <li><a (click)="login()">Ingresar</a></li>
+      <li><a (click)="login()" *ngIf="!(user | async)?.uid">Ingresar</a></li>
     </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>
 <alert type="success">hello</alert>
-<!--login
-<div> {{ (items | async)? | json }} </div>
-<div> {{ (user | async)? | json }} </div>-->
-<button (click)="login()">Logout</button>
+<!--login-->
+<div *ngIf="(user | async)?.uid"> {{ user.uid }} hola {{ popo }}</div>
+<button (click)="logout()">Logout</button>
 
