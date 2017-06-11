@@ -13,13 +13,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { HomeComponent } from './components/home/home.component';
 // conf routes
-const appRoutes: Routes = [
-  { path: 'calendar', component: CalendarComponent },
-  { path: 'courses', component: CoursesComponent },
-  { path: 'home', component: HomeComponent, data: { title: 'home' }  },
-  { path: '', redirectTo: '/home', pathMatch: 'full'  },
-  { path: '**', component: HomeComponent }
-];
+import { routing } from './app.routing';
 // conf firebase
 export const firebaseConfig = {
   apiKey: 'AIzaSyAHvtTzEsVrT7kPMd5GflGlLuBhngN5KiE',
@@ -37,12 +31,12 @@ export const firebaseConfig = {
     HomeComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes), // routes implements
     BrowserModule,
     AlertModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig), // initialize app firebase
     AngularFireDatabaseModule, // database module
-    AngularFireAuthModule // auth module
+    AngularFireAuthModule, // auth module
+    routing // routes implements
   ],
   providers: [],
   bootstrap: [AppComponent]
