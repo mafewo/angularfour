@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 // bootstrap components
 import { AlertModule } from 'ngx-bootstrap';
 // firebase
@@ -12,16 +11,10 @@ import { AppComponent } from './app.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { HomeComponent } from './components/home/home.component';
-// conf routes
+// config routes
 import { routing } from './app.routing';
-// conf firebase
-export const firebaseConfig = {
-  apiKey: 'AIzaSyAHvtTzEsVrT7kPMd5GflGlLuBhngN5KiE',
-  authDomain: 'hellsbells-f83fc.firebaseapp.com',
-  databaseURL: 'https://hellsbells-f83fc.firebaseio.com',
-  storageBucket: 'hellsbells-f83fc.appspot.com',
-  messagingSenderId: '697879315558'
-};
+// config firebase
+import { firebaseConfig } from './app.firebaseconfig';
 
 @NgModule({
   declarations: [
