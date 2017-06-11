@@ -1,9 +1,10 @@
-import { Component, ViewChild, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 // firebase
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase';
+import { UserComponent } from './components/user/user.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,5 @@ export class AppComponent {
     this.afAuth.auth.signOut();
   }
   mostrar() {
-    console.log(this.user);
   }
 }
