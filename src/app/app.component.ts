@@ -33,6 +33,7 @@ export class AppComponent {
     }).catch(function(error){
       console.error(error);
     });
+  // provider = new firebase.auth.FacebookAuthProvider();
   }
 
   logout() {
