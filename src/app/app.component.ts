@@ -8,8 +8,7 @@ import { UserComponent } from './components/user/user.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   user: Observable<firebase.User>;

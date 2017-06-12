@@ -14,9 +14,9 @@
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <li><a  (click)="mostrar()">Calendario</a></li>
-      <li class="dropdown">
+    <ul *ngIf="(user | async)?.uid" class="nav navbar-nav">
+      <li><a routerLink="/calendar" routerLinkActive="active">Calendario</a></li>
+      <!--<li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           cursos <b class="caret"></b>
         </a>
@@ -29,7 +29,7 @@
           <li class="divider"></li>
           <li><a href="#">BACKEND</a></li>
         </ul>
-      </li>
+      </li>-->
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
@@ -39,7 +39,7 @@
     </form>
     <ul class="nav navbar-nav navbar-right">
       <li><a *ngIf="!(user | async)?.uid" (click)="login()">Ingresar</a></li>
-      <li><a *ngIf="(user | async)?.uid" (click)="logout()">Salir</a></li>
+      <li><a *ngIf="(user | async)?.uid" (click)="logout('home')" routerLink="/calendar" routerLinkActive="active">Salir</a></li>
     </ul>
   </div>
 </nav>
