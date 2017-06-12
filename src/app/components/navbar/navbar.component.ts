@@ -5,35 +5,26 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import * as firebase from 'firebase';
 
-
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class UserComponent implements OnInit {
+export class NavbarComponent implements OnInit {
   user: Observable<firebase.User>;
-  public alerts: any = [
-    {
-      type: 'md-local',
-      msg: `Joya! Estas logueado.`
-    }
-  ];
-  public isCollapsed: boolean = true;
 
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
   }
 
-  public collapsed(event: any): void {
-    // console.log(event);
-  }
-
-  public expanded(event: any): void {
-    // console.log(event);
-  }
-
   ngOnInit() {
   }
 
+  login() {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
+  logout() {
+    this.afAuth.auth.signOut();
+  }
 }

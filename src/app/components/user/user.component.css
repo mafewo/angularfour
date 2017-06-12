@@ -1,0 +1,31 @@
+.row{
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+}
+.thumbnail{    max-width: 100px;
+    margin-top: -70px;
+    margin-bottom: 5px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.media-left>a>img{
+    max-width: 100px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.media-list{
+    margin-bottom: 0px;
+}
+.media-heading {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+:host >>> .alert-md-local {
+  background-color: #B7D968;
+  border-color: #B7D968;
+  color: #fff;
+}

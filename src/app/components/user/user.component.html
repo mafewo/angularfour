@@ -1,3 +1,24 @@
-
-<img src="{{ (user | async)?.photoURL }}" alt="">
-  <div> {{ (user | async)?.displayName }} </div>
+<div *ngIf="(user | async)?.uid" class="row">
+  <div *ngFor="let alert of alerts">
+    <alert [type]="alert.type" dismissible="true">{{ alert.msg }}</alert>
+  </div>
+  <ul class="media-list">
+    <li class="media">
+      <div class="media-left">
+        <a href="#">
+          <img src="{{ (user | async)?.photoURL }}" alt="{{ (user | async)?.displayName }}">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading" (click)="isCollapsed = !isCollapsed">{{ (user | async)?.displayName }}</h4>
+      </div>
+    </li>
+  </ul>
+</div>
+<hr>
+<div (collapsed)="collapsed($event)"
+     (expanded)="expanded($event)"
+     [collapse]="isCollapsed"
+     class="card card-block card-header">
+  <div class="well well-lg">Some content</div>
+</div>
