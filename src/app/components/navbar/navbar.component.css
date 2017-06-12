@@ -1,8 +1,9 @@
 .navbar-brand {
     color: #d00;
-    font-size: 25px;
-
 }
-.navbar-brand i {
+.navbar-brand, .navbar-brand i {
     font-size: 25px;
+}
+.fa-search{
+    color: #d00;
 }

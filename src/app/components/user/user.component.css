@@ -3,23 +3,17 @@
   margin-right: 10px;
   border: 1px solid #e7e7e7;
   border-radius: 4px;
-  background-color: #e7e7e7;
 }
-.thumbnail{    max-width: 100px;
-    margin-top: -70px;
-    margin-bottom: 5px;
-    border: 3px solid #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+.photo-user{
+  max-width: 100px;
+  margin-top: -70px;
+  margin-bottom: 5px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.media-left>a>img{
-    max-width: 100px;
-    border: 3px solid #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-.media-list{
-    margin-bottom: 0px;
+.card img{
+  width: 100%;
 }
 .media-heading {
     margin-top: 10px;
@@ -29,4 +23,7 @@
   background-color: #B7D968;
   border-color: #B7D968;
   color: #fff;
+}
+.well-lg {
+  margin: 0 10px 10px 10px;
 }

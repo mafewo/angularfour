@@ -16,25 +16,11 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul *ngIf="(user | async)?.uid" class="nav navbar-nav">
       <li><a routerLink="/calendar" routerLinkActive="active">Calendario</a></li>
-      <!--<li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          cursos <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">WEB</a></li>
-          <li><a href="#">SERVIDORES</a></li>
-          <li><a href="#">DATABASE</a></li>
-          <li class="divider"></li>
-          <li><a href="#">FRONTEND</a></li>
-          <li class="divider"></li>
-          <li><a href="#">BACKEND</a></li>
-        </ul>
-      </li>-->
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Buscar">
-      <a href="#"><i class="fa fa-search fa-2x"></i></a>
+      <a href="#"><i class="fa fa-search fa-1x"></i></a>
       </div>
     </form>
     <ul class="nav navbar-nav navbar-right">

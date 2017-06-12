@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
       msg: `Joya! Estas logueado.`
     }
   ];
-  public isCollapsed: boolean = true;
+  public isCollapsed: boolean = false;
 
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
