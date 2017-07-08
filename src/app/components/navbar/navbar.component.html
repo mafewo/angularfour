@@ -19,8 +19,8 @@
     </ul>
     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Buscar">
-      <a href="#"><i class="fa fa-search fa-1x"></i></a>
+        <input type="text" id="popo" class="form-control" placeholder="Buscar">
+      <a (click)="search($event)"><i class="fa fa-search fa-1x"></i></a>
       </div>
     </form>
     <ul class="nav navbar-nav navbar-right">
@@ -29,3 +29,11 @@
     </ul>
   </div>
 </nav>
+<div *ngFor="let video of videos | async" class="col-sm-3 col-md-2">
+  <div class="thumbnail" (click)="openCustom(video)">
+    <img src="{{video.snippet.thumbnails.medium.url}}" alt="{{video.snippet.title}}">
+    <div class="caption">
+      <p>{{video.snippet.title}}</p>
+    </div>
+  </div>
+</div>
