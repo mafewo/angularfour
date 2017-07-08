@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { Overlay, overlayConfigFactory } from 'angular2-modal';
 import { Modal, BSModalContext } from 'angular2-modal/plugins/bootstrap';
-import { CustomModal } from '../../custom-modal-sample';
 
 import { Observable } from 'rxjs/Observable';
 import {Router} from '@angular/router'
@@ -11,6 +10,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import * as firebase from 'firebase';
 // service
 import { YoutubeService } from '../../youtube.service';
+import { CustomModal } from '../modal/modal.component';
 
 @Component({
   selector: 'app-navbar',

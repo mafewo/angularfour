@@ -23,11 +23,11 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserComponent } from './components/user/user.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CustomModal } from './components/modal/modal.component';
 // service
 import { YoutubeService } from './youtube.service';
 // import { Filtros } from './app.filter';
 
-import { CustomModal } from './custom-modal-sample';
 
 @NgModule({
   declarations: [
