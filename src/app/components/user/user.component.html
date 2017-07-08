@@ -4,25 +4,25 @@
   </div>-->
     <!--Card-->
   <div class="card card-cascade">
-    <!--Card image-->
+    <!--Card image
     <div class="view overlay hm-white-slight">
         <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2842%29.jpg" class="img-fluid" alt="">
         <a>
             <div class="mask waves-effect waves-light"></div>
         </a>
-    </div>
+    </div>-->
     <!--/.Card image-->
     <!--Card content-->
     <div class="card-block text-center">
       <img class="photo-user" (click)="isCollapsed = !isCollapsed" src="{{ (user | async)?.photoURL }}" alt="{{ (user | async)?.displayName }}">
-      <!--Title-->
+      <!--Title
       <div (collapsed)="collapsed($event)"
         (expanded)="expanded($event)"
         [collapse]="isCollapsed">
         <h4 class="card-title">
           <strong>{{ (user | async)?.displayName }}</strong></h4>
         <h5>Web developer</h5>
-      </div>
+      </div>-->
     </div>
     <!--/.Card content-->
   </div>
