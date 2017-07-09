@@ -9,7 +9,7 @@
 }
 .col-sm-3.col-md-2 {
     height: 180px;
-    margin: 5px;
+    margin: 0px;
     padding: 0px;
 }
 img {
@@ -20,7 +20,7 @@ img {
 .thumbnail {
     height: 190px;
 }
-.thumbnail[_ngcontent-c0] {
+.thumbnail[_ngcontent-c1] {
     height: 190px;
     background-color: #333;
 }

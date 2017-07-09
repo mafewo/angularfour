@@ -25,7 +25,8 @@ import { UserComponent } from './components/user/user.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CustomModal } from './components/modal/modal.component';
 // service
-import { YoutubeService } from './youtube.service';
+import { YoutubeService } from './service/youtube.service';
+import { LoaderService } from './service/loader.service';
 // import { Filtros } from './app.filter';
 
 
@@ -55,6 +56,7 @@ import { YoutubeService } from './youtube.service';
   ],
   providers: [
     YoutubeService,
+    LoaderService,
     /*FormControl,
     ReactiveFormsModule*/
     ],

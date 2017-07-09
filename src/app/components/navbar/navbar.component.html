@@ -29,11 +29,15 @@
     </ul>
   </div>
 </nav>
-<div *ngFor="let video of videos | async" class="col-sm-3 col-md-2">
-  <div class="thumbnail" (click)="openCustom(video)">
-    <img src="{{video.snippet.thumbnails.medium.url}}" alt="{{video.snippet.title}}">
-    <div class="caption">
-      <p>{{video.snippet.title}}</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let video of videos" class="col-sm-3 col-md-2">
+      <div class="thumbnail" (click)="openCustom(video)">
+        <img src="{{video.snippet.thumbnails.medium.url}}" alt="{{video.snippet.title}}">
+        <div class="caption">
+          <p>{{video.snippet.title}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
