@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
  import { Http, Response} from '@angular/http';
 
 const BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
-const API_TOKEN = 'AIzaSyBrl4HWPPQ-V_I57VC99CQXX9dboKMEBJI';
+const API_TOKEN = 'VC99CQXX9dboKMEBJIAIzaSyBrl4HWPPQ-V_I57';
 
 @Injectable()
 export class YoutubeService {
